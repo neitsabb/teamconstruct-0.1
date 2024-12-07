@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  body {
+    font-family: "Manrope", sans-serif;
+    @apply overflow-x-hidden antialiased leading-relaxed tracking-wide text-gray-700 bg-gray-50;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  h1 {
+    @apply text-xl md:text-3xl font-bold text-gray-900;
+  }
+
+  h2 {
+    @apply text-lg md:text-2xl font-bold text-gray-900;
+  }
+
+  h3 {
+    @apply text-base md:text-xl font-bold text-gray-900;
+  }
+
+  h4 {
+    @apply text-base md:text-lg font-bold text-gray-900;
+  }
+
+  /* a:hover {
+    @apply text-primary;
+  } */
+
+  .container-large {
+    @apply px-4 mx-auto w-full max-w-7xl;
+  }
+
+  header .topbar {
+    @apply w-full flex justify-end items-center gap-x-8 h-24 flex-col md:flex-row;
+  }
+
+  label {
+    @apply text-sm;
+  }
+
+  /* Styles pour les curseurs */
+  .range-slider {
+    -webkit-appearance: none; /* Pour masquer le style natif */
+  }
+
+  .range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    background: #cb403c; /* Blue-600 */
+    border-radius: 9999px;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  .range-slider::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    background: #cb403c; /* Blue-600 */
+    border-radius: 9999px;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  #filter-estate {
+    @apply h-0 md:h-auto;
+    transition: height 0.3s ease-out; /* Ajoute une transition à la hauteur */
+    overflow: hidden; /* Cache les éléments quand la hauteur est à 0 */
+  }
+
+  #filter-estate.open {
+    height: auto; /* Lorsque 'open' est ajouté, la hauteur devient automatique */
+  }
+}
+
+@layer components {
+  .card {
+    @apply border rounded-xl p-4 bg-white drop-shadow-sm;
+  }
+
+  .grid-view {
+    @apply;
+  }
+
+  .list-view {
+    @apply grid grid-cols-1 gap-4 pb-3 w-full;
+  }
+
+  .list-view #card-estate {
+    @apply flex;
+    background-color: red;
+  }
+
+  button.active {
+    @apply bg-primary text-white;
+  }
+
+  section.hero {
+    @apply bg-cover bg-center bg-no-repeat bg-fixed h-96;
+  }
+}

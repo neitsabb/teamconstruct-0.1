@@ -1,0 +1,21 @@
+{
+  "name": "teamconstruct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx mix watch -- --watch-options-poll=1000"
+  },
+  "author": "neitsab",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "fast-glob": "^3.3.2",
+    "laravel-mix": "^6.0.49",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15"
+  }
+}
